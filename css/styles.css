@@ -39,3 +39,7 @@ header h2 {
 .navbar-toggler {
   margin-left: auto;
 }
+
+form .row{
+    margin-bottom: 3px;
+}
