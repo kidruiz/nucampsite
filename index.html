@@ -29,8 +29,8 @@
                     <h1>Nucamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
-                <div class="col-md-12 col-xl-2">
-                    <a class="btn btn-info btn-lg text-white text-nowrap" href="reserveForm">Reserve Campsite</a>
+                <div class="col-md-4 col-xl-2 mt-4">
+                    <a class="btn btn-info btn-lg text-white text-nowrap" href="#reserveForm">Reserve Campsite</a>
                 </div>  
             </div>
         </div>
@@ -39,7 +39,6 @@
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nucampNavbar">
             <button 
                 class="navbar-toggler ml-auto" 
                 type="button" 
@@ -61,7 +60,7 @@
     <div class="container">
         <div class="row row-content align-items-center">
             <div class="col-sm-4 order-sm-last col-md-3">
-                <h2 class="text-sm-right">Discover & Review</h2>
+                <h2 class="text-sm-end">Discover & Review</h2>
             </div>
             <div class="col">
                 <div class="d-flex">
@@ -75,14 +74,14 @@
         </div>
 
         <div class="row row-content align-items-center">
-            <div class="col-sm-4 order-sm-first col-md-3">
-                <h2 class="text-sm-left text-xs-right">Featured Campsites</h2>
+            <div class="col-sm-4 first col-md-3">
+                <h2>Featured Campsites</h2>
             </div>
             <div class="col">
                 <div class="d-flex">                
                     <div class="align-self-center">
                         <h3>React Lake Campground</h3>
-                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                        <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
                     </div>
                     <img class="me-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake Campground" />
                 </div>
@@ -91,7 +90,7 @@
 
         <div class="row row-content align-items-center">
             <div class="col-sm-4 order-sm-last col-md-3">
-                <h2 class="text-sm-right">Our Community Partners</h2>
+                <h2 class="text-sm-end">Our Community Partners</h2>
             </div>
             <div class="col">
                 <div class="d-flex">
@@ -106,17 +105,16 @@
     </div>
 
     <div class="row row-content">
-        <div class="col-sm-9 col-lg-5 mx-auto col-form-label">         
+        <div class="col-sm-9 col-lg-5 mx-auto">         
             <div class="card">
                 <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
-            </div>
-            <div class="card-body">
-                    <form id="reserveForm" class="form-control">
-                        <div class="row">
-                            <div class="col-sm-6  col-form-label">
-                                <label class="col col-form-label" for="numCampers">Number of Campers</label>
-                                <select name="numCampers" id="numCampers">
-                                    <option value="select"> Select...</option>
+                <div class="card-body">
+                    <form id="reserveForm">
+                        <div class="row mb-3">
+                            <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
+                            <div class="col">
+                                <select name="numCampers" id="numCampers" class="form-control">
+                                    <option selected>Select...</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -125,22 +123,22 @@
                                     <option value="6">6</option>
                                 </select>
                             </div>
-                        </div>        
-                        <div class="row">
-                            <div class="col-sm-6 col-form-label">
-                                <label for="date">Date</label>
-                                <input name="date" id="date" placeholder="mm/dd/yyyy">
+                        </div>
+                        <div class="row mb-3">
+                            <label for="date" class="col-sm-6 col-form-label">Date</label>
+                            <div class="col">
+                                <input type="date" class="form-control" name="date" id="date" placeholder="Date">
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col col-form-label">
-                                <button type="submit" class="btn btn-primary">Search</button>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <button class="btn btn-primary" type="submit" >Search</button>
                             </div>
                         </div>
                     </form>
+                </div>
             </div>
-            
-        </div>
+        </div>    
     </div>
 
     <footer class="=site-footer">
@@ -155,7 +153,7 @@
                         <li><a href="contactus.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col 6 col-sm-5 text-center">
+                <div class="col-6 col-sm-5 text-center">
                     <h5>Social</h5>
                     <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
                     <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
