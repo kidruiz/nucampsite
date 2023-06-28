@@ -30,15 +30,75 @@
                     <h2>a better way to camp</h2>
                 </div>
                 <div class="col-md-4 col-xl-2 mt-4">
-                    <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-bs-toggle="tooltip"
+                    <!--TOOLTIP OPTION <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-bs-toggle="tooltip"
                     data-bs-placement="bottom" data-bs-html="true" title="Or call us at <br />
                     <strong>1-206-555-1234</strong>">
                     Reserve Campsite
-                    </a>
+                    </a> -->
+                    <button  role="button" class="btn btn-lg btn-info text-white" type="button" data-bs-toggle="modal" data-bs-target="#reserveModal">Reserve Campsite</button>
+
                 </div>  
             </div>
         </div>
     </header>
+
+
+    <div class="modal fade" id="reserveModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Reserve a Campsite</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post" id="reserveForm">
+                            <div class="row mb-3">
+                                <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
+                                <div class="col">
+                                    <select name="numCampers" id="numCampers" class="form-control">
+                                        <option selected>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="date" class="col-sm-6 col-form-label">Date</label>
+                                <div class="col">
+                                    <input type="date" class="form-control" name="date" id="date" placeholder="Date">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label class="col-sm-6 col-form-label">Campsite Type</label>
+                                <div class="col-2 btn-group">
+                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="siteType" id="siteTent" autocomplete="off" checked>
+                                        <label class="btn btn-success" for="siteTent">Tent</label>
+                                      
+                                        <input type="radio" class="btn-check" name="siteType" id="siteRV" autocomplete="off">
+                                        <label class="btn btn-primary" for="siteRV">RV</label>
+                                      
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <button class="btn btn-primary" type="submit" >Search</button>
+                                    <button class="btn btn-secondary" data-bs-dismiss="modal" type="cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
@@ -155,7 +215,7 @@
         </div>
     </div>
 
-    <div class="row row-content">
+    <!-- CARD OPTION <div class="row row-content">
         <div class="col-sm-9 col-lg-5 mx-auto">         
             <div class="card">
                 <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
@@ -190,7 +250,7 @@
                 </div>
             </div>
         </div>    
-    </div>
+    </div> -->
 
     <footer class="=site-footer">
         <div class="container">
@@ -222,10 +282,10 @@
     <!-- Bootstrap JavaScript plugins.-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 
-    <script>
+    <!-- Java Script Tooltip <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))    
-     </script>
+     </script> -->
 
 </body>
 </html>
